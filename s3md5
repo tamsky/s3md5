@@ -264,8 +264,8 @@ fi
 
 if [ -n "$ETAG" ]; then
   if [ $DEBUG -eq 1 ]; then
-    # Return Etag/S3 MD5 Sum
-    $ECHO_BIN "$s3sum-$n"
+    # Return Etag/S3 MD5 Sum with filename just summed
+    $ECHO_BIN "$s3sum-$n  $FILE"
   fi
   if [ "$s3sum-$n" == "$ETAG" ]; then
     $ECHO_BIN "TRUE"
