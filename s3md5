@@ -275,6 +275,6 @@ if [ -n "$ETAG" ]; then
     exit 1
   fi
 else
-  # Return Etag/S3 MD5 Sum
-  $ECHO_BIN "$s3sum-$n"
+  # Return Etag/S3 MD5 Sum with filename just summed
+  $ECHO_BIN "$s3sum-$n  $FILE"
 fi
